@@ -1,0 +1,10 @@
+<div class="card m-3">
+	<div class="card-header">
+		<div class="card-header-title" [ngClass]="{'has-text-grey': !note.title}">{{note.title || "No title"}}</div>
+	</div>
+	<div class="card-content" [ngClass]="{'has-text-grey': !note.body}" [innerHTML]="note.body || 'No body' | whitespaceFixer"></div>
+	<footer class="card-footer">
+		<a class="card-footer-item" [routerLink]="['edit', note.id || 0]">Edit</a>
+		<a class="card-footer-item" (click)="deleteNote()">Delete</a>
+	</footer>
+</div>

@@ -1,0 +1,21 @@
+<form class="box">
+	<div class="field">
+		<div class="control">
+			<input class="input is-medium" name="title" type="text" placeholder="Title" [(ngModel)]="note.title">
+		</div>
+	</div>
+	<div class="field">
+		<div class="control">
+			<textarea class="textarea is-medium" name="body" type="text" placeholder="Take a note..."
+				[(ngModel)]="note.body"></textarea>
+		</div>
+	</div>
+	<div class="field is-grouped">
+		<div class="control">
+			<button class="button is-link" (click)="save()">Save</button>
+		</div>
+		<div class="control">
+			<button class="button is-link is-light" (click)="clear()">Clear</button>
+		</div>
+	</div>
+</form>

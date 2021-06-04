@@ -1,0 +1,10 @@
+<div class="m-5">
+	<div class="block">
+		<app-new-note></app-new-note>
+	</div>
+
+	<div class="block content" *ngIf="noteService.notes.length > 0">
+		<h1>Notes</h1>
+		<app-note-view [notes]="noteService.notes"></app-note-view>
+	</div>
+</div>
